@@ -1,0 +1,314 @@
+:root{
+    --bg-color-news: #00001a;
+    --ff: 'Inter', sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-800: 800;
+}
+
+
+
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 2em;
+    font-family: var(--ff);
+}
+
+.header{
+    min-width: 340px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo{
+    width: 45px;
+    height: 45px;
+}
+
+.header__menu{
+    width: 35px;
+    height: 25px;
+}
+
+.header__menu:hover{
+    cursor: pointer;
+}
+
+.nav{
+    display: none;
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+}
+
+.nav--on{
+    display: block;
+}
+
+
+.nav__list{
+    padding: 5em;
+    padding-left: 1.5em;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 2em;
+}
+
+.nav__link{
+    color: black;
+    text-decoration: none;
+}
+
+.nav__close{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
+.nav__close:hover{
+    cursor: pointer;
+}
+
+
+
+/**Main content*/
+
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin-top: 2em;
+}
+
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.hero__image{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 98%;
+    min-width: 300px;
+    height: 300px;
+    background-image: url('/assets/images/image-web-3-mobile.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero__more{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.hero__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+
+.hero__title-text{
+    font-size: 2rem;
+    font-family: var(--fw-800);
+}
+
+.hero__info{
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: var(--fw-400);
+    max-width: 500px;
+}
+
+.hero__button{
+    width: 200px;
+    padding: 1em;
+    height: 50px;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    background-color: orange;
+    font-weight: var(--fw-800);
+}
+
+
+
+
+/**news*/
+
+.news{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    background-color: black;
+    height: fit-content;
+    padding: 2em;
+}
+
+.news__title{
+    color: yellow;
+}
+
+.news__content{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.news__headline{
+    color: white;
+    font-size: 1.1rem;
+}
+
+.news__lead{
+    font-size: 1rem;
+    line-height: 1.5;
+    color: grey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1000px){
+
+
+    body{
+        padding: 6em;
+        padding-top: 2em;
+    }
+
+.header{
+    max-width: 1440px;
+}
+
+    .header__menu{
+        display: none;
+    }
+
+    .nav{
+        display: flex;
+        align-items: center;
+        position: static;
+        height: auto;
+        width: fit-content;
+    }
+
+    .nav__list{
+        display: flex;
+        flex-direction: row;
+        gap: 3.5em;
+        padding: 0;
+    }
+
+    .nav__close{
+        display: none;
+    }
+
+
+
+
+    /**MEDIA main content*/
+
+    .content{
+        max-width: 1440px;
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+    }
+    
+    
+    .hero{
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        width: 1300px;
+    }
+    
+
+    .hero__image{
+        width: 100%;
+        display: flex;
+        height: 290px;
+        background-image: url('/assets/images/image-web-3-desktop.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .hero__more{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5em;
+    }
+
+
+    .hero__title-text{
+        width: 250px;
+        font-size: 3rem;
+    }
+    
+    .hero__content{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    
+    .hero__info{
+        line-height: 1.5;
+        max-width: 350px;
+    }
+
+
+    
+    
+
+
+
+
+
+
+
+}
