@@ -1,9 +1,15 @@
 :root{
     --bg-color-news: #00001a;
+    --news-title:hsl(35, 77%, 62%);
     --ff: 'Inter', sans-serif;
     --fw-400: 400;
     --fw-700: 700;
     --fw-800: 800;
+    --bg-btn: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --number-color: hsl(233, 8%, 79%);
+    --text-color: hsl(236, 13%, 42%);
+    --bg-news: hsl(240, 100%, 5%);
 }
 
 
@@ -19,6 +25,7 @@ body{
     padding: 2em;
     font-family: var(--ff);
 }
+
 
 .header{
     min-width: 340px;
@@ -69,8 +76,15 @@ body{
 }
 
 .nav__link{
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
+}
+
+
+.nav__link:hover{
+    cursor: pointer;
+    color: var(--bg-btn);
+    transition: color ease-in-out 0.1s;
 }
 
 .nav__close{
@@ -130,11 +144,13 @@ body{
 
 
 .hero__title-text{
+    color: black;
     font-size: 2rem;
     font-family: var(--fw-800);
 }
 
 .hero__info{
+    color: var(--text-color);
     font-size: 1rem;
     line-height: 1.5;
     font-weight: var(--fw-400);
@@ -148,8 +164,15 @@ body{
     border: none;
     text-transform: uppercase;
     color: white;
-    background-color: orange;
+    background-color: var(--bg-btn);
     font-weight: var(--fw-800);
+}
+
+.hero__button:hover{
+    cursor: pointer;
+    background-color: var(--bg-color-news);
+    transition: background-color ease-out 0.1s;
+    transform: translateY(-1px);
 }
 
 
@@ -160,14 +183,15 @@ body{
 .news{
     display: flex;
     flex-direction: column;
-    gap: 3em;
+    gap: 2em;
     background-color: black;
     height: fit-content;
     padding: 2em;
 }
 
 .news__title{
-    color: yellow;
+    color: var(--news-title);
+    font-size: 2rem;
 }
 
 .news__content{
@@ -182,10 +206,20 @@ body{
     font-size: 1.1rem;
 }
 
+.news__headline:hover{
+    cursor: pointer;
+    color: var(--news-title);
+    transition: color ease-in-out 0.1s;
+}
+
 .news__lead{
     font-size: 1rem;
     line-height: 1.5;
     color: grey;
+}
+
+hr{
+    border: solid 0.1em rgb(170, 163, 163, 0.3);
 }
 
 
@@ -201,9 +235,7 @@ body{
 
 
 
-
-
-
+/*Media queries*/
 
 
 
@@ -281,7 +313,7 @@ body{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        gap: 5em;
+        gap: 1em;
     }
 
 
