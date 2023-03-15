@@ -7,7 +7,7 @@
     --fw-800: 800;
     --bg-btn: hsl(5, 85%, 63%);
     --off-white: hsl(36, 100%, 99%);
-    --number-color: hsl(233, 8%, 79%);
+    --number-color: #c9c9ca;
     --text-color: hsl(236, 13%, 42%);
     --bg-news: hsl(240, 100%, 5%);
 }
@@ -251,6 +251,62 @@ hr{
 
 
 
+/**Footer*/
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin-top: 8em;
+}
+
+.footer__news{
+    display: flex;
+    gap: 2em;
+}
+
+
+
+.footer__info{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
+.footer__images-container{
+    max-width: 200px;
+    min-width: 200px;
+}
+
+.footer__images-img{
+    width: 100%;
+}
+
+
+
+.footer__number{
+    color: var(--number-color);
+    font-size: 2rem;
+    font-weight: var(--fw-800);
+}
+
+.footer__headline{
+    color: var(--bg-color-news);
+    font-size: 1.5rem;
+    font-weight: var(--fw-700);
+}
+
+.footer__headline:hover{
+    cursor: pointer;
+    color: var(--bg-btn);
+}
+
+.footer__lead{
+    max-width: 300px;
+}
 
 
 
@@ -274,6 +330,7 @@ hr{
     body{
         padding: 6em;
         padding-top: 2em;
+        margin-bottom: 2em;
     }
 
 .header{
@@ -312,6 +369,7 @@ hr{
     /**MEDIA main content*/
 
     .content{
+        width: 100%;
         max-width: 1440px;
         display: flex;
         flex-direction: row;
@@ -367,9 +425,49 @@ hr{
     
 
 
+    .footer{
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        width: 100%;
+        max-width: 1440px;
+        margin-top: 3em;
+    }
 
 
+    .footer__news{
+        display: flex;
+        gap: 1em;
+    }
+    
+    
+    .footer__images-container{
+        max-width: 150px;
+        min-width: 150px;
+    }
+    
+    .footer__images-img{
+        width: 100%;
+    }
 
+    
+    .footer__number{
+        color: var(--number-color);
+        font-size: 2rem;
+        font-weight: var(--fw-800);
+    }
+    
+    .footer__headline{
+        color: var(--bg-color-news);
+        font-size: 1rem;
+        font-weight: var(--fw-700);
+    }
+    
+    
+    .footer__lead{
+        max-width: 400px;
+    }
+    
 
 
 }
